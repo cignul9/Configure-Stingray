@@ -214,9 +214,7 @@ param(
 )
 $Protocol = 'https';
 $SoapPort = 9090;
-#$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition;
 $DebugPreference = 'SilentlyContinue';
-#$ErrorPreference = 'SilentlyContinue';
 $ProgressPreference = 'SilentlyContinue';
 function Get-StingrayVersion{
 	$Error.Clear();
@@ -259,8 +257,6 @@ function Connect-WebService{
 	param(
 		 [Parameter(Mandatory = $True, Position = 0)]
 		 [string] $WSDL
-		,[Parameter(Mandatory = $False, Position = 1)]
-		 [string] $Namespace
 	)
 	if(! ${GLOBAL:WebServiceCache}){
 		${GLOBAL:WebServiceCache} = @{}
@@ -290,7 +286,6 @@ function Connect-WebService{
 	}
 	# Import the web service into a CodeDom
 	$ServiceNamespace = New-Object System.CodeDom.CodeNamespace;
-	if($Namespace){$ServiceNamespace.Name = $Namespace};
 	$CodeCompileUnit = New-Object System.CodeDom.CodeCompileUnit;
 	$ServiceDescriptionImporter = New-Object Web.Services.Description.ServiceDescriptionImporter;
 	$ServiceDescriptionImporter.AddServiceDescription($ServiceDescription, $null, $null);
