@@ -190,7 +190,7 @@ param(
 		,'System.RequestLog'
 		,'System.Stats'
 		,'System.Steelhead'
-		,'TrafficIPGroup'
+		,'TrafficIPGroups'
 		,'User'
 		,'VirtualServer'
 	 )]
