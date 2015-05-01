@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Often there is a need to automate the provisioning of services through a Stingray/SteelApp load balancer.  Configure-Stingray creates an easy-to-use web-based connector for use in other Powershell scripts to get and set configuration parameters of a specific type for one or more Stingray/SteelApp load balancers.
+Automates the provisioning of services through a Stingray/SteelApp load balancer.  Configure-Stingray creates an easy-to-use web-based connector for use in other Powershell scripts to get and set configuration parameters of a specific type for one or more Stingray/SteelApp load balancers.
 
 .DESCRIPTION
 Configure-Stingray connects to the specified Stingray, determines its software version and then reads a corresponding wsdl for that software version and the specified configuration type.  The returned object can then be used to write or read that type of configuration settings to and from the Stingray.
