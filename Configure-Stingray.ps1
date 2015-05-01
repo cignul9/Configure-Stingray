@@ -151,7 +151,7 @@ param(
 		,'AlertCallback'
 		,'Alerting.Action'
 		,'Alerting.EventType'
-		,'Catalog.AptimizerProfile'
+		,'Catalog.Aptimizer.Profile'
 		,'Catalog.Authenticators'
 		,'Catalog.Bandwidth'
 		,'Catalog.DNSServer.ZoneFiles'
